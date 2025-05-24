@@ -1,0 +1,33 @@
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  width: 230px;
+  margin: 10px;
+  padding: 10px;
+}
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.card-top-left {
+  text-align: left;
+}
+.card-bottom {
+  color: rgb(35, 41, 46);
+}
+
+.card-img {
+  width: 100%;
+  max-width: 30px;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-price {
+  color: black;
+  font-size: large;
+  font-weight: bold;
+}

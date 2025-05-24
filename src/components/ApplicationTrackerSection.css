@@ -1,0 +1,23 @@
+.app-notupload {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
+}
+
+.tracker-img {
+  width: 100%;
+  max-width: 40px;
+  height: auto;
+  object-fit: cover;
+}
+
+.imgContainer {
+  background: rgb(224, 223, 223);
+  border-radius: 100%;
+  width: fit-content;
+  padding: 10px;
+  margin: auto;
+}
