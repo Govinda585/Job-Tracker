@@ -1,0 +1,106 @@
+.dashboard {
+  display: flex;
+  height: auto;
+  background-color: #f9f9f9;
+}
+
+.main-page {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+}
+.logo-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logo-section p {
+  color: #4b5563;
+  font-size: 16px;
+}
+.side-navbar-logo-img {
+  width: 100%;
+  max-width: 40px;
+  height: auto;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+/* Header of the Main Page */
+.main-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5px;
+  background-color: #fff;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* Header Left Side */
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Heading Text */
+.heading {
+  font-size: 26px;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* card section */
+.card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 10px;
+  overflow: hidden;
+}
+
+.sub-heading {
+  margin-top: 5px;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.main-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-input {
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.profile-btn,
+.logout-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2463eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+}

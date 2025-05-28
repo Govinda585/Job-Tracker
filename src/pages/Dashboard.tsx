@@ -4,17 +4,16 @@ import pending from "../assets/wall-clock.png";
 import interview from "../assets/interview.png";
 
 import "./Dashboard.css";
-import Card from "./Card";
-import MainContent from "./MainContent";
-import ApplicationTrackerSection from "./ApplicationTrackerSection";
+import Card from "../components/Card";
+import MainContent from "../components/MainContent";
+import ApplicationTrackerSection from "../components/ApplicationTrackerSection";
+import Button from "../components/Button";
 const Dashboard = () => {
+  const handleProfile = () => {};
+  const handleLogout = () => {};
   return (
     <div>
       <div className="dashboard">
-        <section className="side-navbar">
-          <span>Logo</span> <p>JobTracker</p>
-        </section>
-
         <section className="main-page">
           <div className="main-page-header">
             <div className="header-left">
@@ -23,10 +22,15 @@ const Dashboard = () => {
                 Track your job application and progress
               </p>
             </div>
-
-            <button className="btn-add">
-              <span className="btn-add-symbol"> + </span> Add Application
-            </button>
+            <div className="header-right">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="search-input"
+              />
+              <Button btnName="Profile" fun={handleProfile} />
+              <Button btnName="LogOut" bgColor="#dc3545" fun={handleLogout} />
+            </div>
           </div>
           {/* Content */}
           <div className="card-section">

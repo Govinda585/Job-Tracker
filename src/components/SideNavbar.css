@@ -1,0 +1,21 @@
+.sidebar-img {
+  width: 100%;
+  max-width: 20px;
+  height: 20px;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.sidebar p {
+  margin-left: 20px;
+}
+
+.sidebar:hover {
+  background: rgb(238, 238, 238);
+}

@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./LoginSignup.css";
+import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [login, setLogin] = useState<Boolean>(false);
-
+  const navigate = useNavigate();
   const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLogin((prev) => !prev);
+    navigate("/dashboard");
   };
   return (
     <div className="login-container">
