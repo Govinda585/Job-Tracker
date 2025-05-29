@@ -20,7 +20,6 @@ const Applications = () => {
 
   const [showModal, setShowModal] = useState(false);
 
-  const handleAddClick = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
 
   useEffect(() => {
@@ -58,7 +57,9 @@ const Applications = () => {
     };
     fetchApplication();
   }, []);
-  const handleAdd = () => {};
+  const handleAdd = () => {
+    setShowModal(true);
+  };
 
   return (
     <div>

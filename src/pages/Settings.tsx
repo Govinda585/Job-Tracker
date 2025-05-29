@@ -1,56 +1,58 @@
-import file from "../assets/file.png";
-import success from "../assets/rating.png";
-import pending from "../assets/wall-clock.png";
-import interview from "../assets/interview.png";
+import "./Dashboard.css"; // Layout styles
+import "./Settings.css"; // Form styles
 
-import "./Dashboard.css";
-import Card from "../components/Card";
-import MainContent from "../components/MainContent";
-import ApplicationTrackerSection from "../components/ApplicationTrackerSection";
 const Settings = () => {
   return (
-    <div>
-      <div className="dashboard">
-        <section className="main-page">
-          <div className="main-page-header">
-            <div className="header-left">
-              <h2 className="heading">Settings</h2>
-              <p className="sub-heading">
-                Track your job application and progress
-              </p>
+    <div className="dashboard">
+      <section className="main-page">
+        {/* Header */}
+        <div className="main-page-header">
+          <div className="header-left">
+            <h2 className="heading">Settings</h2>
+            <p className="sub-heading">
+              Manage your profile, password, and preferences
+            </p>
+          </div>
+        </div>
+
+        {/* Settings Content */}
+        <div className="settings-container">
+          <div className="settings-section">
+            <h3>Profile Info</h3>
+            <div className="form-group">
+              <label>Name</label>
+              <input type="text" value="John Doe" />
+            </div>
+            <div className="form-group">
+              <label>Email</label>
+              <input type="email" value="john@example.com" disabled />
             </div>
           </div>
-          {/* Content */}
-          <div className="card-section">
-            <Card
-              title="Total Application"
-              price="0"
-              subtitle="+12% from last month"
-              icon={file}
-            />
-            <Card
-              title="Pending"
-              price="0"
-              subtitle="+3% from last month"
-              icon={pending}
-            />
-            <Card
-              title="Interviews"
-              price="0"
-              subtitle="+2% from last month"
-              icon={interview}
-            />
-            <Card
-              title="Success Rate"
-              price="0%"
-              subtitle="+4% from last month"
-              icon={success}
-            />
+
+          <div className="settings-section">
+            <h3>Change Password</h3>
+            <div className="form-group">
+              <label>Current Password</label>
+              <input type="password" />
+            </div>
+            <div className="form-group">
+              <label>New Password</label>
+              <input type="password" />
+            </div>
+            <div className="form-group">
+              <label>Confirm New Password</label>
+              <input type="password" />
+            </div>
           </div>
-          <MainContent />
-          <ApplicationTrackerSection />
-        </section>
-      </div>
+
+          <div className="settings-section">
+            <h3>Preferences</h3>
+            <label>
+              <input type="checkbox" /> Enable Dark Mode
+            </label>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

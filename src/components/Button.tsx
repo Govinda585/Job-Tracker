@@ -2,7 +2,7 @@ import "./Button.css";
 type buttonPros = {
   btnName: string;
   bgColor?: string;
-  fun: () => void;
+  fun: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 const Button = ({ btnName, bgColor, fun }: buttonPros) => {
   return (

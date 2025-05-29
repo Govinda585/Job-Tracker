@@ -8,9 +8,21 @@ import Card from "../components/Card";
 import MainContent from "../components/MainContent";
 import ApplicationTrackerSection from "../components/ApplicationTrackerSection";
 import Button from "../components/Button";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 const Dashboard = () => {
-  const handleProfile = () => {};
-  const handleLogout = () => {};
+  const [logout, setLogout] = useState<boolean>(false);
+  const navigate = useNavigate();
+  const handleProfile = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    navigate("/settings");
+  };
+  const handleLogout = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setLogout(true);
+    navigate("/");
+  };
   return (
     <div>
       <div className="dashboard">
@@ -29,7 +41,7 @@ const Dashboard = () => {
                 className="search-input"
               />
               <Button btnName="Profile" fun={handleProfile} />
-              <Button btnName="LogOut" bgColor="#dc3545" fun={handleLogout} />
+              <Button btnName="LogOut" fun={handleLogout} bgColor="#dc3545" />
             </div>
           </div>
           {/* Content */}

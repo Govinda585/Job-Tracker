@@ -1,14 +1,49 @@
-import file from "../assets/file.png";
-import success from "../assets/rating.png";
-import pending from "../assets/wall-clock.png";
-import interview from "../assets/interview.png";
-import suitcase from "../assets/suitcase.png";
-
 import "./Dashboard.css";
-import Card from "../components/Card";
-import MainContent from "../components/MainContent";
-import ApplicationTrackerSection from "../components/ApplicationTrackerSection";
+import "./Analytics.css";
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+} from "chart.js";
+import { Pie, Bar } from "react-chartjs-2";
+
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title
+);
+
 const Analytics = () => {
+  const pieData = {
+    labels: ["Applied", "Interview", "Offer", "Rejected"],
+    datasets: [
+      {
+        data: [12, 5, 3, 4],
+        backgroundColor: ["#2463eb", "#facc15", "#22c55e", "#ef4444"],
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const barData = {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+    datasets: [
+      {
+        label: "Applications",
+        data: [3, 5, 7, 6, 8],
+        backgroundColor: "#2463eb",
+      },
+    ],
+  };
   return (
     <div>
       <div className="dashboard">
@@ -22,34 +57,19 @@ const Analytics = () => {
             </div>
           </div>
           {/* Content */}
-          <div className="card-section">
-            <Card
-              title="Total Application"
-              price="0"
-              subtitle="+12% from last month"
-              icon={file}
-            />
-            <Card
-              title="Pending"
-              price="0"
-              subtitle="+3% from last month"
-              icon={pending}
-            />
-            <Card
-              title="Interviews"
-              price="0"
-              subtitle="+2% from last month"
-              icon={interview}
-            />
-            <Card
-              title="Success Rate"
-              price="0%"
-              subtitle="+4% from last month"
-              icon={success}
-            />
+          <div className="analytics-page">
+            <div className="chart-grid">
+              <div className="chart-container">
+                <h3>Status Breakdown</h3>
+                <Pie data={pieData} />
+              </div>
+
+              <div className="chart-container">
+                <h3>Applications Over Time</h3>
+                <Bar data={barData} />
+              </div>
+            </div>
           </div>
-          <MainContent />
-          <ApplicationTrackerSection />
         </section>
       </div>
     </div>
